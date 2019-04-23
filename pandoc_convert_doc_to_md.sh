@@ -1,2 +1,2 @@
 #!/bin/bash
-for f in *.doc; do ffmpeg -ab 128k -i "$f" "${f%.m4a}.wav"; done
+for f in *.docx; do pandoc -s "$f" -t markdown -o "${f%.docx}.md"; done
